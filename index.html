@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+  <style>
+    body { font-family: Arial; background: #f2f2f2; }
+    form { background: #fff; padding: 20px; width: 300px; margin: 50px auto; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    input, select { width: 100%; padding: 8px; margin: 5px 0; }
+    button { background: green; color: white; padding: 10px; width: 100%; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Student Registration Form</h2>
+
+  <form action="save.php" method="POST" onsubmit="return validateForm()">
+    <label>Name:</label>
+    <input type="text" name="name" id="name">
+
+    <label>Email:</label>
+    <input type="email" name="email" id="email">
+
+    <label>Course:</label>
+    <select name="course" id="course">
+      <option value="">Select Course</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Maths">Maths</option>
+      <option value="Physics">Physics</option>
+    </select>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let course = document.getElementById("course").value;
+      let gender = document.querySelector('input[name="gender"]:checked');
+
+      if (name === "" || email === "" || course === "" || !gender) {
+        alert("Please fill all fields!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
