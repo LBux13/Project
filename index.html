@@ -7,17 +7,18 @@
     form { background: #fff; padding: 20px; width: 300px; margin: 50px auto; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
     input, select { width: 100%; padding: 8px; margin: 5px 0; }
     button { background: green; color: white; padding: 10px; width: 100%; border: none; cursor: pointer; }
+    h2 { text-align: center; }
   </style>
 </head>
 <body>
-  <h2 style="text-align:center;">Student Registration Form</h2>
+  <h2>Student Registration Form</h2>
 
   <form action="save.php" method="POST" onsubmit="return validateForm()">
     <label>Name:</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" placeholder="Enter your name" required><br><br>
 
     <label>Email:</label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" placeholder="Enter your email" required><br><br>
 
     <label>Course:</label>
     <select name="course" id="course">

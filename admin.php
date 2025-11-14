@@ -2,7 +2,7 @@
 $servername = "localhost";
 $uname = "root";
 $email = "";
-$dbname = "lalb_db";
+$dbname = "lalb";
 
 $conn = new mysqli($servername, $uname, $email, $dbname);
 if ($conn->connect_error) {
